@@ -45,7 +45,7 @@ parsear_opciones() {
 
 enumerar_usuarios_y_entorno() {
   echo "=== Usuarios y entorno ==="
-  ls -la
+  cat /etc/passwd | cut -d: -f1
   echo
 }
 
