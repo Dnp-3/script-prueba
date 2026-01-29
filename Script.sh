@@ -92,12 +92,6 @@ enumerar_red() {
   echo
 }
 
-imprimir_resumen() {
-  echo "=== Resumen de hallazgos ==="
-  echo "Aquí puedes agregar un resumen de los hallazgos importantes."
-  echo
-}
-
 # -----------------------------------------------------------------------------
 # Salida
 # -----------------------------------------------------------------------------
@@ -122,14 +116,13 @@ main() {
   fi
 
   imprimir_cabecera
-  enumerar_usuario_y_entorno
+  enumerar_usuarios_y_entorno
   enumerar_sistema
   enumerar_permisos
   enumerar_cron_y_timers
   enumerar_servicios_y_procesos
   enumerar_credenciales_y_datos
   enumerar_red
-  imprimir_resumen
   imprimir_cierre
 }
 
