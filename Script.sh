@@ -52,6 +52,8 @@ enumerar_usuarios_y_entorno() {
 enumerar_sistema() {
   echo "=== Sistema ==="
   uname -a
+  sudo -l 2>/dev/null || echo "No se pudo ejecutar sudo -l"
+  sudo -V 2>/dev/null | head -n 1 || echo "No se pudo ejecutar sudo -V"
   echo
 }
 
@@ -67,7 +69,7 @@ enumerar_permisos() {
 enumerar_cron_y_timers() {
   echo "=== Cron y timers ==="
   cat /etc/crontab
-  contab -l
+  crontab -l
   echo
 }
 
